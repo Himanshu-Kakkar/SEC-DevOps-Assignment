@@ -1,0 +1,33 @@
+{
+  "name": "assign-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"No build step required for this Node.js app\"",
+    "docker:build:multi": "docker build -f Dockerfile.multistage -t node-app-multistage .",
+    "docker:build:single": "docker build -f Dockerfile.single -t node-app-single .",
+    "docker:run:multi": "docker run -d -p 3001:1234 --name multistage-container node-app-multistage",
+    "docker:run:single": "docker run -d -p 3002:1234 --name single-container node-app-single",
+    "docker:stop": "docker stop multistage-container single-container",
+    "docker:clean": "docker stop multistage-container single-container && docker rm multistage-container single-container && docker rmi node-app-multistage node-app-single",
+    "docker:compare": "./docker-comparison.sh",
+    "docker:analyze": "./compare-sizes.sh"
+  },
+  "keywords": ["nodejs", "express", "docker", "multistage", "devops"],
+  "author": "Himanshu Kakkar",
+  "license": "ISC",
+  "description": "Node.js Express app with multi-stage Docker build demonstration",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
