@@ -1,4 +1,5 @@
-Assignment 2 - Multi-Stage Dockerfile
+## Assignment 2 - Multi-Stage Dockerfile
+### check output folder for screenshots
 
 This project shows how to build a Node.js app with a multi-stage Dockerfile and compare it to a single-stage one.
 
@@ -48,3 +49,4 @@ docker rm multistage-container single-container
 
 To remove the images:
 docker rmi node-app-multistage node-app-single
+
