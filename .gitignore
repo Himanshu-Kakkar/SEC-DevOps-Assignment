@@ -1,0 +1,65 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node modules (any subdirectory)
+**/node_modules/
+
+# Build outputs
+**/dist/
+**/build/
+**/.next/
+**/out/
+
+# Coverage
+**/coverage/
+**/.nyc_output/
+
+# Env files
+*.env
+*.env.*
+.env
+.env.*
+
+# Cache
+**/.cache/
+**/.parcel-cache/
+
+# OS files (macOS)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local data
+**/pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm/
+
+# REPL history
+.node_repl_history
+
+# Packaged archives
+*.tgz
+
+# Docker
+**/.env.docker
+**/docker-data/
+
+# TypeScript
+**/*.tsbuildinfo
